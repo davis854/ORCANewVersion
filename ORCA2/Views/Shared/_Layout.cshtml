@@ -62,24 +62,29 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="Home/Index" style="color: black;">Home</a></li>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About ORCA", "About", "Home")</li>
+                    <li>@Html.ActionLink("Expert Contact Information", "Contact", "Home")</li>
+                    <!--<li><a href="Home/Index" style="color: black;">Home</a></li>
                     <li><a href="Home/About" style="color: black;">About ORCA</a></li>
-                    <li><a href="Home/Contact" style="color: black;">Expert Contact Information</a></li>
+                    <li><a href="Home/Contact" style="color: black;">Expert Contact Information</a></li>-->
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="UserLists/Index" style="color: black;">Users
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Send Message To Expert", "Create", "Messages")</li>
                             <li>@Html.ActionLink("List Of All Messages", "Index", "Messages") </li>
-                            <li>@Html.ActionLink("List Of All Validated Experts", "Index", "Experts")</li>
+                            <li>@Html.ActionLink("List Of All Validated Experts", "Index", "Expertises")</li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="Experts/Index" style="color: black;">Experts
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="Replies/Create">Reply To An Expert</a></li>
-                            <li><a href="Experts/Index">List Of All Validated Experts</a></li>
+                            <li>@Html.ActionLink("Reply To An Expert", "Create", "Replies")</li>
+                            <li>@Html.ActionLink("List Of All Validated Experts", "Index", "Expertises")</li>
+                            <!--<li><a href="Replies/Create">Reply To An Expert</a></li>
+                            <li><a href="Experts/Index">List Of All Validated Experts</a></li>-->
                         </ul>
                     </li>
                 </ul>
